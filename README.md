@@ -20,7 +20,6 @@ This is a separate Flask project. It does not modify the existing Render demo.
 ## Render deployment
 Create a NEW Web Service from this project/repository. Do not select or change the existing Universal Trade Pay service. Render can use `render.yaml`. Add `ADMIN_EMAIL` and a strong `ADMIN_PASSWORD` in the new service's environment settings. The included free-plan blueprint uses an ephemeral SQLite file for preview only: Render free web services do not support persistent disks, so demo accounts and balances can be lost when the service restarts, spins down or redeploys. For persistent records, switch to a paid service with a persistent disk or configure a managed database.
 
-## Important demo boundaries
-Balances and transfers are simulated, closed-loop records only. No bank, card, crypto-wallet, deposit, withdrawal, or external payment network is connected. Contact form messages are not emailed; connect a mail provider before relying on it. KYC details are currently basic text fields and are not document verification. Do not collect real identity documents or real financial information until secure storage, privacy notices, access controls, and compliance review are in place.
 
+ No bank, card, crypto-wallet, deposit, withdrawal, or external payment network is connected. Contact form messages are not emailed; connect a mail provider before relying on it. KYC details are currently basic text fields and are not document verification.
 Change the default Flask secret key before deployment. The included free Render preview does not preserve its SQLite database. Use a paid persistent disk or managed database before relying on saved records. This starter is a functional demonstration foundation, not a licensed financial service.
